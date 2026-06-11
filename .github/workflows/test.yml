@@ -1,0 +1,21 @@
+name: Первый тестовый workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Приветствие
+        run: echo "Привет! Я робот GitHub Actions!"
+      
+      - name: Проверка версии
+        run: echo "Работаю на Ubuntu"
+      
+      - name: Список файлов
+        run: ls -la
